@@ -17,17 +17,33 @@
                     <connections>
                         <segue destination="6mS-J7-xPh" kind="relationship" relationship="viewControllers" id="tbr-5c-0H0"/>
                         <segue destination="vXZ-lx-hvc" kind="relationship" relationship="viewControllers" id="Ji7-J1-GTo"/>
-                        <segue destination="mkE-eo-dN0" kind="relationship" relationship="viewControllers" id="4pz-c3-iYe"/>
+                        <segue destination="aVh-GQ-5UF" kind="relationship" relationship="viewControllers" id="3H4-bz-FTz"/>
                     </connections>
                 </tabBarController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="8VG-Wi-T4S" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="-678" y="390"/>
         </scene>
-        <!--View Controller - POST request-->
+        <!--Navigation Controller - Item-->
+        <scene sceneID="jm7-GF-n2S">
+            <objects>
+                <navigationController definesPresentationContext="YES" id="aVh-GQ-5UF" sceneMemberID="viewController">
+                    <tabBarItem key="tabBarItem" title="Item" id="YD7-DM-Lcc"/>
+                    <navigationBar key="navigationBar" contentMode="scaleToFill" id="8GI-Vo-Itr">
+                        <autoresizingMask key="autoresizingMask"/>
+                    </navigationBar>
+                    <connections>
+                        <segue destination="mkE-eo-dN0" kind="relationship" relationship="rootViewController" id="3Px-mx-MuV"/>
+                    </connections>
+                </navigationController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="XyJ-uj-9cI" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="-8" y="1423"/>
+        </scene>
+        <!--PostVC - POST request-->
         <scene sceneID="Wuz-Nj-OA1">
             <objects>
-                <viewController id="mkE-eo-dN0" sceneMemberID="viewController">
+                <viewController id="mkE-eo-dN0" customClass="MSHPostVC" sceneMemberID="viewController">
                     <layoutGuides>
                         <viewControllerLayoutGuide type="top" id="Ie8-7M-djE"/>
                         <viewControllerLayoutGuide type="bottom" id="BFU-yD-wde"/>
@@ -88,16 +104,46 @@
                                         <fontDescription key="fontDescription" type="system" pointSize="14"/>
                                         <textInputTraits key="textInputTraits"/>
                                     </textField>
+                                    <button appearanceType="aqua" opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="qbr-hx-ake">
+                                        <rect key="frame" x="20" y="373" width="285" height="30"/>
+                                        <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                        <state key="normal" title="Send Request">
+                                            <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
+                                        </state>
+                                    </button>
                                 </subviews>
                             </scrollView>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
                     </view>
                     <tabBarItem key="tabBarItem" title="POST request" id="91o-cg-fSf"/>
+                    <navigationItem key="navigationItem" id="PAT-be-E1d"/>
+                    <connections>
+                        <segue destination="vux-6t-WPA" kind="push" id="oFC-QA-QQv"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="URL-Vg-5iY" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="-314" y="1531"/>
+            <point key="canvasLocation" x="558" y="1399"/>
+        </scene>
+        <!--View Controller-->
+        <scene sceneID="Req-c5-KEj">
+            <objects>
+                <viewController id="vux-6t-WPA" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="UJn-qJ-ma8"/>
+                        <viewControllerLayoutGuide type="bottom" id="C8B-bs-1AM"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="04a-MH-Ann">
+                        <rect key="frame" x="0.0" y="0.0" width="320" height="568"/>
+                        <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
+                    </view>
+                    <navigationItem key="navigationItem" id="14u-6A-gvq"/>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="ySV-ln-2f8" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="1164" y="1511"/>
         </scene>
         <!--SettingsVC - Settings-->
         <scene sceneID="vuK-CC-XuF">
@@ -145,7 +191,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="Iy1-Hp-7Ol" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="144" y="1068"/>
+            <point key="canvasLocation" x="608" y="528"/>
         </scene>
         <!--View Controller - JSON-->
         <scene sceneID="ufC-wZ-h7g">
