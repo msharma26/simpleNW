@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		32AFD4B3195E6FCA00D46E30 /* MSHSettingsVC.m in Sources */ = {isa = PBXBuildFile; fileRef = 32AFD4B2195E6FCA00D46E30 /* MSHSettingsVC.m */; };
 		32B4B591195D02D600F523E4 /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 32B4B590195D02D600F523E4 /* Foundation.framework */; };
 		32B4B593195D02D600F523E4 /* CoreGraphics.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 32B4B592195D02D600F523E4 /* CoreGraphics.framework */; };
 		32B4B595195D02D600F523E4 /* UIKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 32B4B594195D02D600F523E4 /* UIKit.framework */; };
@@ -39,6 +40,7 @@
 		32B4B5FC195D02F600F523E4 /* UIProgressView+AFNetworking.m in Sources */ = {isa = PBXBuildFile; fileRef = 32B4B5E9195D02F600F523E4 /* UIProgressView+AFNetworking.m */; };
 		32B4B5FD195D02F600F523E4 /* UIRefreshControl+AFNetworking.m in Sources */ = {isa = PBXBuildFile; fileRef = 32B4B5EB195D02F600F523E4 /* UIRefreshControl+AFNetworking.m */; };
 		32B4B5FE195D02F600F523E4 /* UIWebView+AFNetworking.m in Sources */ = {isa = PBXBuildFile; fileRef = 32B4B5ED195D02F600F523E4 /* UIWebView+AFNetworking.m */; };
+		32E3B510195F1A3D009B6E9B /* Settings.bundle in Resources */ = {isa = PBXBuildFile; fileRef = 32E3B50F195F1A3C009B6E9B /* Settings.bundle */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -52,6 +54,8 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		32AFD4B1195E6FCA00D46E30 /* MSHSettingsVC.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = MSHSettingsVC.h; path = "UIKit+AFNetworking/MSHSettingsVC.h"; sourceTree = "<group>"; };
+		32AFD4B2195E6FCA00D46E30 /* MSHSettingsVC.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = MSHSettingsVC.m; path = "UIKit+AFNetworking/MSHSettingsVC.m"; sourceTree = "<group>"; };
 		32B4B58D195D02D600F523E4 /* SimpleNW.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = SimpleNW.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		32B4B590195D02D600F523E4 /* Foundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Foundation.framework; path = System/Library/Frameworks/Foundation.framework; sourceTree = SDKROOT; };
 		32B4B592195D02D600F523E4 /* CoreGraphics.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreGraphics.framework; path = System/Library/Frameworks/CoreGraphics.framework; sourceTree = SDKROOT; };
@@ -108,6 +112,8 @@
 		32B4B5EB195D02F600F523E4 /* UIRefreshControl+AFNetworking.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UIRefreshControl+AFNetworking.m"; sourceTree = "<group>"; };
 		32B4B5EC195D02F600F523E4 /* UIWebView+AFNetworking.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "UIWebView+AFNetworking.h"; sourceTree = "<group>"; };
 		32B4B5ED195D02F600F523E4 /* UIWebView+AFNetworking.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UIWebView+AFNetworking.m"; sourceTree = "<group>"; };
+		32E3B50E195E744F009B6E9B /* Properties.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Properties.h; sourceTree = "<group>"; };
+		32E3B50F195F1A3C009B6E9B /* Settings.bundle */ = {isa = PBXFileReference; lastKnownFileType = "wrapper.plug-in"; path = Settings.bundle; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -172,11 +178,15 @@
 				32B4B59F195D02D600F523E4 /* MSHAppDelegate.h */,
 				32B4B5A0195D02D600F523E4 /* MSHAppDelegate.m */,
 				32B4B5A2195D02D600F523E4 /* Main_iPhone.storyboard */,
+				32AFD4B1195E6FCA00D46E30 /* MSHSettingsVC.h */,
+				32AFD4B2195E6FCA00D46E30 /* MSHSettingsVC.m */,
 				32B4B5A5195D02D600F523E4 /* Main_iPad.storyboard */,
 				32B4B5A8195D02D600F523E4 /* MSHViewController.h */,
 				32B4B5A9195D02D600F523E4 /* MSHViewController.m */,
 				32B4B5AB195D02D600F523E4 /* Images.xcassets */,
 				32B4B597195D02D600F523E4 /* Supporting Files */,
+				32E3B50E195E744F009B6E9B /* Properties.h */,
+				32E3B50F195F1A3C009B6E9B /* Settings.bundle */,
 			);
 			path = SimpleNW;
 			sourceTree = "<group>";
@@ -339,6 +349,7 @@
 			files = (
 				32B4B5A7195D02D600F523E4 /* Main_iPad.storyboard in Resources */,
 				32B4B5AC195D02D600F523E4 /* Images.xcassets in Resources */,
+				32E3B510195F1A3D009B6E9B /* Settings.bundle in Resources */,
 				32B4B5A4195D02D600F523E4 /* Main_iPhone.storyboard in Resources */,
 				32B4B59B195D02D600F523E4 /* InfoPlist.strings in Resources */,
 			);
@@ -359,6 +370,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				32AFD4B3195E6FCA00D46E30 /* MSHSettingsVC.m in Sources */,
 				32B4B5EE195D02F600F523E4 /* AFHTTPRequestOperation.m in Sources */,
 				32B4B5FB195D02F600F523E4 /* UIImageView+AFNetworking.m in Sources */,
 				32B4B5AA195D02D600F523E4 /* MSHViewController.m in Sources */,
@@ -593,6 +605,7 @@
 				32B4B5C4195D02D600F523E4 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 		32B4B5C5195D02D600F523E4 /* Build configuration list for PBXNativeTarget "SimpleNWTests" */ = {
 			isa = XCConfigurationList;
@@ -601,6 +614,7 @@
 				32B4B5C7195D02D600F523E4 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
 	};
