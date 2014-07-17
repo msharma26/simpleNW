@@ -9,10 +9,19 @@
 #import "MSHPostVC.h"
 #import "MSHKeyboardListener.h"
 #import "AFNetworking.h"
+#import "MSHPostResponseVC.h"
 
 #define BaseURLString @"http://manusharma.me"
 
-@interface MSHPostVC ()
+@interface MSHPostVC ()<UITextFieldDelegate>
+@property (nonatomic, strong) MSHKeyboardListener *keyboardListener;
+@property (nonatomic, strong) NSMutableDictionary *responseDictionary;
+@property (nonatomic, weak) IBOutlet UIScrollView *scrollViewMain;
+
+@property (nonatomic, strong)MSHPostResponseVC *destViewController;
+
+// IBActions
+-(IBAction) btnActionSendRequest:(id)sender;
 
 @end
 
@@ -31,6 +40,13 @@
 {
     [super viewDidLoad];
     [self jsonTapped];
+    self.keyboardListener = [MSHKeyboardListener shared];
+    
+    
+}
+
+-(void) viewDidLayoutSubviews{
+    [self.scrollViewMain setContentSize:CGSizeMake(320,self.view.frame.size.height+ 64+44)];
 }
 
 - (void)didReceiveMemoryWarning
@@ -38,6 +54,8 @@
     [super didReceiveMemoryWarning];
 
 }
+
+
 
 
 -(void) jsonTapped
@@ -54,60 +72,67 @@
     [manager POST:@"http://manusharma.me/login/check_login.php"
        parameters:params
           success:^(AFHTTPRequestOperation *operation, id responseObject) {
+              [[weakself responseDictionary] setDictionary:(NSDictionary*) responseObject];
+
               NSLog(@"JSON: %@", responseObject);
+              
+              
           }
           failure:^(AFHTTPRequestOperation *operation, NSError *error) {
               NSLog(@"Error: %@", error);
     }];
 }
 
-//
-//-(void) jsonTapped2
-//{
-//    // 0.5 Creating weak references
-//    __weak id weakself = self;
-//    
-//    
-//    // 1
-//    NSString *string = [NSString stringWithFormat:@"%@/login", BaseURLString];
-//    //NSURL *url = [NSURL URLWithString:string];
-//    NSURL *url=[NSURL URLWithString:string];
-//
-//    NSURLRequest *request = [NSURLRequest requestWithURL:url];
-//    
-//    NSDictionary *params = @{@"username": @"msharma",
-//                             @"password": @"Avinash1"};
-//
-//    
-//    // 2
-//    AFHTTPRequestOperation *operation = [[AFHTTPRequestOperation alloc] initWithRequest:request];
-//    operation.responseSerializer = [AFJSONResponseSerializer serializer];
-//    
-//    [operation POST:@"http://manusharma/login"
-//       parameters:params
-//          success:^(AFHTTPRequestOperation *operation, id responseObject) {
-//              NSLog(@"JSON: %@", responseObject);
-//          }
-//          failure:^(AFHTTPRequestOperation *operation, NSError *error) {
-//              NSLog(@"Error: %@", error);
-//          }];
-//
-//    // 5
-//    [operation start];
-//}
 
-
-
-
-/*
-#pragma mark - Navigation
-
-// In a storyboard-based application, you will often want to do a little preparation before navigation
-- (void)prepareForSegue:(UIStoryboardSegue *)segue sender:(id)sender
-{
-    // Get the new view controller using [segue destinationViewController].
-    // Pass the selected object to the new view controller.
+-(void) resizeScrollView{
+ //   if(self.keyboardListener.visible){
+        self.scrollViewMain.frame = CGRectMake(self.view.frame.origin.x,self.view.frame.origin.y,self.view.frame.size.width, self.view.frame.size.height-270);
+   // }
 }
-*/
 
+
+#pragma mark - TextField Delegate
+
+-(void) textFieldDidBeginEditing:(UITextField *)textField{
+    self.scrollViewMain.frame = CGRectMake(self.view.frame.origin.x,self.view.frame.origin.y,self.view.frame.size.width, self.view.frame.size.height-216+64);
+    
+    if(textField.tag==0){
+        
+    }
+}
+
+- (void)textFieldDidEndEditing:(UITextField *)textField{
+    self.scrollViewMain.frame = CGRectMake(self.view.frame.origin.x,self.view.frame.origin.y,self.view.frame.size.width, self.view.frame.size.height);
+
+}
+
+- (BOOL)textFieldShouldReturn:(UITextField *)textField{
+    self.scrollViewMain.frame = CGRectMake(self.view.frame.origin.x,self.view.frame.origin.y,self.view.frame.size.width, self.view.frame.size.height);
+
+    [textField resignFirstResponder];
+        return YES;
+}
+
+#pragma mark - storyboard navigation
+- (void)prepareForSegue:(UIStoryboardSegue *)segue sender:(id)sender {
+    if ([segue.identifier isEqualToString:@"SeguePostResponse"]) {
+        //NSIndexPath *indexPath = [self.tableView indexPathForSelectedRow];
+        self.destViewController = segue.destinationViewController;
+        
+        
+    }
+}
+
+
+-(void) performSegueWithIdentifier:(NSString *)identifier sender:(id)sender{
+    self.destViewController.responseDictionary = self.responseDictionary;
+}
+
+
+
+#pragma mark - IBActions
+
+-(IBAction)btnActionSendRequest:(id)sender{
+    //[self performSegueWithIdentifier:@"SeguePostResponse" sender:self];
+}
 @end

@@ -15,20 +15,19 @@
                         <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
                     </tabBar>
                     <connections>
-                        <segue destination="6mS-J7-xPh" kind="relationship" relationship="viewControllers" id="tbr-5c-0H0"/>
-                        <segue destination="vXZ-lx-hvc" kind="relationship" relationship="viewControllers" id="Ji7-J1-GTo"/>
                         <segue destination="aVh-GQ-5UF" kind="relationship" relationship="viewControllers" id="3H4-bz-FTz"/>
+                        <segue destination="L7P-3C-plx" kind="relationship" relationship="viewControllers" id="zeD-69-Ygs"/>
                     </connections>
                 </tabBarController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="8VG-Wi-T4S" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="-678" y="390"/>
         </scene>
-        <!--Navigation Controller - Item-->
+        <!--Navigation Controller - POST Request-->
         <scene sceneID="jm7-GF-n2S">
             <objects>
                 <navigationController definesPresentationContext="YES" id="aVh-GQ-5UF" sceneMemberID="viewController">
-                    <tabBarItem key="tabBarItem" title="Item" id="YD7-DM-Lcc"/>
+                    <tabBarItem key="tabBarItem" title="POST Request" id="YD7-DM-Lcc"/>
                     <navigationBar key="navigationBar" contentMode="scaleToFill" id="8GI-Vo-Itr">
                         <autoresizingMask key="autoresizingMask"/>
                     </navigationBar>
@@ -57,7 +56,7 @@
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMinY="YES"/>
                                 <subviews>
                                     <label appearanceType="aqua" opaque="NO" clipsSubviews="YES" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Base URL" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="e0n-15-eSZ">
-                                        <rect key="frame" x="25" y="53" width="275" height="26"/>
+                                        <rect key="frame" x="25" y="72" width="275" height="26"/>
                                         <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                         <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                         <nil key="highlightedColor"/>
@@ -74,42 +73,52 @@
                                         <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                         <nil key="highlightedColor"/>
                                     </label>
-                                    <textField appearanceType="aqua" opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="I2r-9v-Tb7">
+                                    <textField appearanceType="aqua" opaque="NO" clipsSubviews="YES" tag="4" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="I2r-9v-Tb7">
                                         <rect key="frame" x="166" y="292" width="139" height="30"/>
                                         <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                         <fontDescription key="fontDescription" type="system" pointSize="14"/>
                                         <textInputTraits key="textInputTraits"/>
                                     </textField>
-                                    <textField appearanceType="aqua" opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="YG8-TB-GLa">
+                                    <textField appearanceType="aqua" opaque="NO" clipsSubviews="YES" tag="1" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="YG8-TB-GLa">
                                         <rect key="frame" x="20" y="233" width="133" height="30"/>
                                         <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                         <fontDescription key="fontDescription" type="system" pointSize="14"/>
                                         <textInputTraits key="textInputTraits"/>
+                                        <connections>
+                                            <outlet property="delegate" destination="mkE-eo-dN0" id="dC4-fk-RNc"/>
+                                        </connections>
                                     </textField>
-                                    <textField appearanceType="aqua" opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="ldc-64-cR3">
+                                    <textField appearanceType="aqua" opaque="NO" clipsSubviews="YES" tag="2" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="ldc-64-cR3">
                                         <rect key="frame" x="161" y="233" width="139" height="30"/>
                                         <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                         <fontDescription key="fontDescription" type="system" pointSize="14"/>
                                         <textInputTraits key="textInputTraits"/>
                                     </textField>
-                                    <textField appearanceType="aqua" opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="bdq-AM-2fy">
+                                    <textField appearanceType="aqua" opaque="NO" clipsSubviews="YES" tag="3" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="bdq-AM-2fy">
                                         <rect key="frame" x="20" y="292" width="133" height="30"/>
                                         <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                         <fontDescription key="fontDescription" type="system" pointSize="14"/>
                                         <textInputTraits key="textInputTraits"/>
                                     </textField>
                                     <textField appearanceType="aqua" opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="5lr-kb-gw6">
-                                        <rect key="frame" x="20" y="87" width="280" height="30"/>
+                                        <rect key="frame" x="20" y="106" width="280" height="30"/>
                                         <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                         <fontDescription key="fontDescription" type="system" pointSize="14"/>
                                         <textInputTraits key="textInputTraits"/>
+                                        <connections>
+                                            <outlet property="delegate" destination="mkE-eo-dN0" id="Cs4-md-JOk"/>
+                                        </connections>
                                     </textField>
-                                    <button appearanceType="aqua" opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="qbr-hx-ake">
+                                    <button appearanceType="aqua" opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="qbr-hx-ake" customClass="MSHCustomButton">
                                         <rect key="frame" x="20" y="373" width="285" height="30"/>
                                         <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                         <state key="normal" title="Send Request">
                                             <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
                                         </state>
+                                        <connections>
+                                            <action selector="btnActionSendRequest:" destination="mkE-eo-dN0" eventType="touchUpInside" id="KFk-91-V1e"/>
+                                            <segue destination="vux-6t-WPA" kind="push" identifier="SeguePostResponse" id="9Vu-jb-VSr"/>
+                                        </connections>
                                     </button>
                                 </subviews>
                             </scrollView>
@@ -119,17 +128,17 @@
                     <tabBarItem key="tabBarItem" title="POST request" id="91o-cg-fSf"/>
                     <navigationItem key="navigationItem" id="PAT-be-E1d"/>
                     <connections>
-                        <segue destination="vux-6t-WPA" kind="push" id="oFC-QA-QQv"/>
+                        <outlet property="scrollViewMain" destination="7fy-WV-ndG" id="uqp-AK-wg9"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="URL-Vg-5iY" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="558" y="1399"/>
+            <point key="canvasLocation" x="556" y="1449"/>
         </scene>
-        <!--View Controller-->
+        <!--Post ResponseVC-->
         <scene sceneID="Req-c5-KEj">
             <objects>
-                <viewController id="vux-6t-WPA" sceneMemberID="viewController">
+                <viewController id="vux-6t-WPA" customClass="MSHPostResponseVC" sceneMemberID="viewController">
                     <layoutGuides>
                         <viewControllerLayoutGuide type="top" id="UJn-qJ-ma8"/>
                         <viewControllerLayoutGuide type="bottom" id="C8B-bs-1AM"/>
@@ -137,9 +146,21 @@
                     <view key="view" contentMode="scaleToFill" id="04a-MH-Ann">
                         <rect key="frame" x="0.0" y="0.0" width="320" height="568"/>
                         <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                        <subviews>
+                            <textView appearanceType="aqua" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="MnZ-Q0-c0a">
+                                <rect key="frame" x="0.0" y="0.0" width="320" height="568"/>
+                                <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                                <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="calibratedRGB"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                <textInputTraits key="textInputTraits" autocapitalizationType="sentences"/>
+                            </textView>
+                        </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
                     </view>
                     <navigationItem key="navigationItem" id="14u-6A-gvq"/>
+                    <connections>
+                        <outlet property="txtViewResponse" destination="MnZ-Q0-c0a" id="sP2-jr-8JF"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="ySV-ln-2f8" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
@@ -173,17 +194,19 @@
                             <button appearanceType="aqua" opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="4dO-bF-XC1">
                                 <rect key="frame" x="20" y="176" width="280" height="77"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                <state key="normal" title="Save">
+                                <state key="normal" title="Save and Test">
                                     <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
                                 </state>
                                 <connections>
                                     <action selector="btnActionSave:" destination="6mS-J7-xPh" eventType="touchUpInside" id="v41-Si-hqW"/>
+                                    <segue destination="vXZ-lx-hvc" kind="push" id="MqX-zM-8cY"/>
                                 </connections>
                             </button>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
                     </view>
                     <tabBarItem key="tabBarItem" title="Settings" id="sl0-mF-lW2"/>
+                    <navigationItem key="navigationItem" id="Iva-qW-2iL"/>
                     <connections>
                         <outlet property="saveButton" destination="4dO-bF-XC1" id="YDz-df-Yg6"/>
                         <outlet property="txtFieldURL" destination="5sR-LS-1ap" id="FOE-Yi-gfD"/>
@@ -191,7 +214,23 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="Iy1-Hp-7Ol" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="608" y="528"/>
+            <point key="canvasLocation" x="648" y="244"/>
+        </scene>
+        <!--Navigation Controller - Simple JSON Reqest-->
+        <scene sceneID="jmC-H8-p3L">
+            <objects>
+                <navigationController definesPresentationContext="YES" id="L7P-3C-plx" sceneMemberID="viewController">
+                    <tabBarItem key="tabBarItem" title="Simple JSON Reqest" id="uGp-rA-vxM"/>
+                    <navigationBar key="navigationBar" contentMode="scaleToFill" id="nzF-l3-QdZ">
+                        <autoresizingMask key="autoresizingMask"/>
+                    </navigationBar>
+                    <connections>
+                        <segue destination="6mS-J7-xPh" kind="relationship" relationship="rootViewController" id="3S8-bf-E7C"/>
+                    </connections>
+                </navigationController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="zBa-QH-VdU" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="-24" y="244"/>
         </scene>
         <!--View Controller - JSON-->
         <scene sceneID="ufC-wZ-h7g">
@@ -216,13 +255,14 @@
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
                     </view>
                     <tabBarItem key="tabBarItem" title="JSON" id="1SX-Yq-Ncn"/>
+                    <navigationItem key="navigationItem" id="JGP-b8-pli"/>
                     <connections>
                         <outlet property="tvJSON" destination="hou-37-Dmr" id="h18-BN-gPY"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="x5A-6p-PRh" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="-18" y="-56"/>
+            <point key="canvasLocation" x="1310" y="244"/>
         </scene>
     </scenes>
     <simulatedMetricsContainer key="defaultSimulatedMetrics">

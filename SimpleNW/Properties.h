@@ -17,5 +17,7 @@
 #define urlImages @"http://manusharma.me/pawnu"
 #define urlLocalHost @"http://localhost"
 
+#pragma mark - Images
+
 
 #endif

@@ -7,6 +7,13 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		321C6D77196F8005002FCAC6 /* MSHLeftTableVC.m in Sources */ = {isa = PBXBuildFile; fileRef = 321C6D76196F8005002FCAC6 /* MSHLeftTableVC.m */; };
+		321C6D7B196FD800002FCAC6 /* blur_grey.jpeg in Resources */ = {isa = PBXBuildFile; fileRef = 321C6D79196FD800002FCAC6 /* blur_grey.jpeg */; };
+		321C6D7C196FD800002FCAC6 /* blur_grey.jpeg in Resources */ = {isa = PBXBuildFile; fileRef = 321C6D79196FD800002FCAC6 /* blur_grey.jpeg */; };
+		321C6D7D196FD800002FCAC6 /* blur_green.jpg in Resources */ = {isa = PBXBuildFile; fileRef = 321C6D7A196FD800002FCAC6 /* blur_green.jpg */; };
+		321C6D7E196FD800002FCAC6 /* blur_green.jpg in Resources */ = {isa = PBXBuildFile; fileRef = 321C6D7A196FD800002FCAC6 /* blur_green.jpg */; };
+		321C6D811975134F002FCAC6 /* MSHiPadRootVC.m in Sources */ = {isa = PBXBuildFile; fileRef = 321C6D801975134F002FCAC6 /* MSHiPadRootVC.m */; };
+		321C6D821975134F002FCAC6 /* MSHiPadRootVC.m in Sources */ = {isa = PBXBuildFile; fileRef = 321C6D801975134F002FCAC6 /* MSHiPadRootVC.m */; };
 		32AFD4B3195E6FCA00D46E30 /* MSHSettingsVC.m in Sources */ = {isa = PBXBuildFile; fileRef = 32AFD4B2195E6FCA00D46E30 /* MSHSettingsVC.m */; };
 		32B4B591195D02D600F523E4 /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 32B4B590195D02D600F523E4 /* Foundation.framework */; };
 		32B4B593195D02D600F523E4 /* CoreGraphics.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 32B4B592195D02D600F523E4 /* CoreGraphics.framework */; };
@@ -40,9 +47,10 @@
 		32B4B5FC195D02F600F523E4 /* UIProgressView+AFNetworking.m in Sources */ = {isa = PBXBuildFile; fileRef = 32B4B5E9195D02F600F523E4 /* UIProgressView+AFNetworking.m */; };
 		32B4B5FD195D02F600F523E4 /* UIRefreshControl+AFNetworking.m in Sources */ = {isa = PBXBuildFile; fileRef = 32B4B5EB195D02F600F523E4 /* UIRefreshControl+AFNetworking.m */; };
 		32B4B5FE195D02F600F523E4 /* UIWebView+AFNetworking.m in Sources */ = {isa = PBXBuildFile; fileRef = 32B4B5ED195D02F600F523E4 /* UIWebView+AFNetworking.m */; };
+		32BCBCE1196205060006470C /* MSHPostResponseVC.m in Sources */ = {isa = PBXBuildFile; fileRef = 32BCBCE0196205060006470C /* MSHPostResponseVC.m */; };
+		32BCBCE419621BF80006470C /* MSHCustomButton.m in Sources */ = {isa = PBXBuildFile; fileRef = 32BCBCE319621BF80006470C /* MSHCustomButton.m */; };
 		32E3B510195F1A3D009B6E9B /* Settings.bundle in Resources */ = {isa = PBXBuildFile; fileRef = 32E3B50F195F1A3C009B6E9B /* Settings.bundle */; };
 		32E3B513195F31AB009B6E9B /* MSHPostVC.m in Sources */ = {isa = PBXBuildFile; fileRef = 32E3B512195F31AB009B6E9B /* MSHPostVC.m */; };
-		32E3B51A195F33A9009B6E9B /* UIButton+MSHUI.m in Sources */ = {isa = PBXBuildFile; fileRef = 32E3B519195F33A9009B6E9B /* UIButton+MSHUI.m */; };
 		32E3B51D195F46C1009B6E9B /* MSHKeyboardListener.m in Sources */ = {isa = PBXBuildFile; fileRef = 32E3B51C195F46C1009B6E9B /* MSHKeyboardListener.m */; };
 /* End PBXBuildFile section */
 
@@ -57,6 +65,12 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		321C6D75196F8005002FCAC6 /* MSHLeftTableVC.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = MSHLeftTableVC.h; path = iPad/MSHLeftTableVC.h; sourceTree = "<group>"; };
+		321C6D76196F8005002FCAC6 /* MSHLeftTableVC.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = MSHLeftTableVC.m; path = iPad/MSHLeftTableVC.m; sourceTree = "<group>"; };
+		321C6D79196FD800002FCAC6 /* blur_grey.jpeg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = blur_grey.jpeg; sourceTree = "<group>"; };
+		321C6D7A196FD800002FCAC6 /* blur_green.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = blur_green.jpg; sourceTree = "<group>"; };
+		321C6D7F1975134F002FCAC6 /* MSHiPadRootVC.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MSHiPadRootVC.h; sourceTree = "<group>"; };
+		321C6D801975134F002FCAC6 /* MSHiPadRootVC.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MSHiPadRootVC.m; sourceTree = "<group>"; };
 		32AFD4B1195E6FCA00D46E30 /* MSHSettingsVC.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = MSHSettingsVC.h; path = "UIKit+AFNetworking/MSHSettingsVC.h"; sourceTree = "<group>"; };
 		32AFD4B2195E6FCA00D46E30 /* MSHSettingsVC.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = MSHSettingsVC.m; path = "UIKit+AFNetworking/MSHSettingsVC.m"; sourceTree = "<group>"; };
 		32B4B58D195D02D600F523E4 /* SimpleNW.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = SimpleNW.app; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -115,12 +129,14 @@
 		32B4B5EB195D02F600F523E4 /* UIRefreshControl+AFNetworking.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UIRefreshControl+AFNetworking.m"; sourceTree = "<group>"; };
 		32B4B5EC195D02F600F523E4 /* UIWebView+AFNetworking.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "UIWebView+AFNetworking.h"; sourceTree = "<group>"; };
 		32B4B5ED195D02F600F523E4 /* UIWebView+AFNetworking.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UIWebView+AFNetworking.m"; sourceTree = "<group>"; };
+		32BCBCDF196205060006470C /* MSHPostResponseVC.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MSHPostResponseVC.h; sourceTree = "<group>"; };
+		32BCBCE0196205060006470C /* MSHPostResponseVC.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MSHPostResponseVC.m; sourceTree = "<group>"; };
+		32BCBCE219621BF80006470C /* MSHCustomButton.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = MSHCustomButton.h; path = CustomUI/MSHCustomButton.h; sourceTree = "<group>"; };
+		32BCBCE319621BF80006470C /* MSHCustomButton.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = MSHCustomButton.m; path = CustomUI/MSHCustomButton.m; sourceTree = "<group>"; };
 		32E3B50E195E744F009B6E9B /* Properties.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Properties.h; sourceTree = "<group>"; };
 		32E3B50F195F1A3C009B6E9B /* Settings.bundle */ = {isa = PBXFileReference; lastKnownFileType = "wrapper.plug-in"; path = Settings.bundle; sourceTree = "<group>"; };
 		32E3B511195F31AB009B6E9B /* MSHPostVC.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MSHPostVC.h; sourceTree = "<group>"; };
 		32E3B512195F31AB009B6E9B /* MSHPostVC.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MSHPostVC.m; sourceTree = "<group>"; };
-		32E3B518195F33A9009B6E9B /* UIButton+MSHUI.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = "UIButton+MSHUI.h"; path = "CustomUI/UIButton+MSHUI.h"; sourceTree = "<group>"; };
-		32E3B519195F33A9009B6E9B /* UIButton+MSHUI.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = "UIButton+MSHUI.m"; path = "CustomUI/UIButton+MSHUI.m"; sourceTree = "<group>"; };
 		32E3B51B195F46C0009B6E9B /* MSHKeyboardListener.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MSHKeyboardListener.h; sourceTree = "<group>"; };
 		32E3B51C195F46C1009B6E9B /* MSHKeyboardListener.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MSHKeyboardListener.m; sourceTree = "<group>"; };
 /* End PBXFileReference section */
@@ -149,6 +165,27 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		321C6D74196F7F9F002FCAC6 /* iPad */ = {
+			isa = PBXGroup;
+			children = (
+				32B4B5A5195D02D600F523E4 /* Main_iPad.storyboard */,
+				321C6D75196F8005002FCAC6 /* MSHLeftTableVC.h */,
+				321C6D76196F8005002FCAC6 /* MSHLeftTableVC.m */,
+				321C6D7F1975134F002FCAC6 /* MSHiPadRootVC.h */,
+				321C6D801975134F002FCAC6 /* MSHiPadRootVC.m */,
+			);
+			name = iPad;
+			sourceTree = "<group>";
+		};
+		321C6D78196FC409002FCAC6 /* Assets */ = {
+			isa = PBXGroup;
+			children = (
+				321C6D79196FD800002FCAC6 /* blur_grey.jpeg */,
+				321C6D7A196FD800002FCAC6 /* blur_green.jpg */,
+			);
+			name = Assets;
+			sourceTree = "<group>";
+		};
 		32B4B584195D02D600F523E4 = {
 			isa = PBXGroup;
 			children = (
@@ -182,6 +219,9 @@
 		32B4B596195D02D600F523E4 /* SimpleNW */ = {
 			isa = PBXGroup;
 			children = (
+				321C6D78196FC409002FCAC6 /* Assets */,
+				321C6D74196F7F9F002FCAC6 /* iPad */,
+				32BCBCE519635C640006470C /* Post */,
 				32E3B514195F3311009B6E9B /* CustomUI */,
 				32B4B5C8195D02F600F523E4 /* AFNetworking */,
 				32B4B5DC195D02F600F523E4 /* UIKit+AFNetworking */,
@@ -190,15 +230,12 @@
 				32B4B5A2195D02D600F523E4 /* Main_iPhone.storyboard */,
 				32AFD4B1195E6FCA00D46E30 /* MSHSettingsVC.h */,
 				32AFD4B2195E6FCA00D46E30 /* MSHSettingsVC.m */,
-				32B4B5A5195D02D600F523E4 /* Main_iPad.storyboard */,
 				32B4B5A8195D02D600F523E4 /* MSHViewController.h */,
 				32B4B5A9195D02D600F523E4 /* MSHViewController.m */,
 				32B4B5AB195D02D600F523E4 /* Images.xcassets */,
 				32B4B597195D02D600F523E4 /* Supporting Files */,
 				32E3B50E195E744F009B6E9B /* Properties.h */,
 				32E3B50F195F1A3C009B6E9B /* Settings.bundle */,
-				32E3B511195F31AB009B6E9B /* MSHPostVC.h */,
-				32E3B512195F31AB009B6E9B /* MSHPostVC.m */,
 				32E3B51B195F46C0009B6E9B /* MSHKeyboardListener.h */,
 				32E3B51C195F46C1009B6E9B /* MSHKeyboardListener.m */,
 			);
@@ -284,11 +321,22 @@
 			path = "UIKit+AFNetworking";
 			sourceTree = "<group>";
 		};
+		32BCBCE519635C640006470C /* Post */ = {
+			isa = PBXGroup;
+			children = (
+				32E3B511195F31AB009B6E9B /* MSHPostVC.h */,
+				32E3B512195F31AB009B6E9B /* MSHPostVC.m */,
+				32BCBCDF196205060006470C /* MSHPostResponseVC.h */,
+				32BCBCE0196205060006470C /* MSHPostResponseVC.m */,
+			);
+			name = Post;
+			sourceTree = "<group>";
+		};
 		32E3B514195F3311009B6E9B /* CustomUI */ = {
 			isa = PBXGroup;
 			children = (
-				32E3B518195F33A9009B6E9B /* UIButton+MSHUI.h */,
-				32E3B519195F33A9009B6E9B /* UIButton+MSHUI.m */,
+				32BCBCE219621BF80006470C /* MSHCustomButton.h */,
+				32BCBCE319621BF80006470C /* MSHCustomButton.m */,
 			);
 			name = CustomUI;
 			sourceTree = "<group>";
@@ -370,6 +418,8 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				321C6D7B196FD800002FCAC6 /* blur_grey.jpeg in Resources */,
+				321C6D7D196FD800002FCAC6 /* blur_green.jpg in Resources */,
 				32B4B5A7195D02D600F523E4 /* Main_iPad.storyboard in Resources */,
 				32B4B5AC195D02D600F523E4 /* Images.xcassets in Resources */,
 				32E3B510195F1A3D009B6E9B /* Settings.bundle in Resources */,
@@ -382,6 +432,8 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				321C6D7C196FD800002FCAC6 /* blur_grey.jpeg in Resources */,
+				321C6D7E196FD800002FCAC6 /* blur_green.jpg in Resources */,
 				32B4B5BD195D02D600F523E4 /* InfoPlist.strings in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -393,11 +445,11 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				32E3B51A195F33A9009B6E9B /* UIButton+MSHUI.m in Sources */,
 				32AFD4B3195E6FCA00D46E30 /* MSHSettingsVC.m in Sources */,
 				32B4B5EE195D02F600F523E4 /* AFHTTPRequestOperation.m in Sources */,
 				32B4B5FB195D02F600F523E4 /* UIImageView+AFNetworking.m in Sources */,
 				32B4B5AA195D02D600F523E4 /* MSHViewController.m in Sources */,
+				321C6D811975134F002FCAC6 /* MSHiPadRootVC.m in Sources */,
 				32B4B5EF195D02F600F523E4 /* AFHTTPRequestOperationManager.m in Sources */,
 				32B4B5FC195D02F600F523E4 /* UIProgressView+AFNetworking.m in Sources */,
 				32B4B5F1195D02F600F523E4 /* AFNetworkReachabilityManager.m in Sources */,
@@ -407,12 +459,15 @@
 				32B4B5F8195D02F600F523E4 /* UIActivityIndicatorView+AFNetworking.m in Sources */,
 				32B4B5F2195D02F600F523E4 /* AFSecurityPolicy.m in Sources */,
 				32B4B5FD195D02F600F523E4 /* UIRefreshControl+AFNetworking.m in Sources */,
+				321C6D77196F8005002FCAC6 /* MSHLeftTableVC.m in Sources */,
 				32B4B5FE195D02F600F523E4 /* UIWebView+AFNetworking.m in Sources */,
+				32BCBCE1196205060006470C /* MSHPostResponseVC.m in Sources */,
 				32E3B51D195F46C1009B6E9B /* MSHKeyboardListener.m in Sources */,
 				32B4B5F0195D02F600F523E4 /* AFHTTPSessionManager.m in Sources */,
 				32B4B5F9195D02F600F523E4 /* UIAlertView+AFNetworking.m in Sources */,
 				32B4B5F4195D02F600F523E4 /* AFURLRequestSerialization.m in Sources */,
 				32E3B513195F31AB009B6E9B /* MSHPostVC.m in Sources */,
+				32BCBCE419621BF80006470C /* MSHCustomButton.m in Sources */,
 				32B4B5F7195D02F600F523E4 /* AFNetworkActivityIndicatorManager.m in Sources */,
 				32B4B5F6195D02F600F523E4 /* AFURLSessionManager.m in Sources */,
 				32B4B59D195D02D600F523E4 /* main.m in Sources */,
@@ -425,6 +480,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				32B4B5BF195D02D600F523E4 /* SimpleNWTests.m in Sources */,
+				321C6D821975134F002FCAC6 /* MSHiPadRootVC.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -554,6 +610,7 @@
 				GCC_PRECOMPILE_PREFIX_HEADER = YES;
 				GCC_PREFIX_HEADER = "SimpleNW/SimpleNW-Prefix.pch";
 				INFOPLIST_FILE = "SimpleNW/SimpleNW-Info.plist";
+				IPHONEOS_DEPLOYMENT_TARGET = 7.0;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				WRAPPER_EXTENSION = app;
 			};
@@ -567,6 +624,7 @@
 				GCC_PRECOMPILE_PREFIX_HEADER = YES;
 				GCC_PREFIX_HEADER = "SimpleNW/SimpleNW-Prefix.pch";
 				INFOPLIST_FILE = "SimpleNW/SimpleNW-Info.plist";
+				IPHONEOS_DEPLOYMENT_TARGET = 7.0;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				WRAPPER_EXTENSION = app;
 			};

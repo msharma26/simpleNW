@@ -12,7 +12,9 @@
 
 - (BOOL)application:(UIApplication *)application didFinishLaunchingWithOptions:(NSDictionary *)launchOptions
 {
-    // Override point for customization after application launch.
+    if(UI_USER_INTERFACE_IDIOM() == UIUserInterfaceIdiomPad){
+        
+    }
     return YES;
 }
 							
