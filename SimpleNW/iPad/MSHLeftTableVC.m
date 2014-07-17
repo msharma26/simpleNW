@@ -164,9 +164,11 @@
 - (void)tableView:(UITableView *)tableView didSelectRowAtIndexPath:(NSIndexPath *)indexPath{
     self.rootVC = [[MSHiPadRootVC alloc] init];
     //UINavigationController *navController = (UINavigationController*) self.splitViewController.childViewControllers[1];
+
     UIStoryboard *iPadStory = [UIStoryboard storyboardWithName:@"Main_iPad" bundle: nil];
-    UIViewController *httpVC = (UIViewController*) [iPadStory instantiateViewControllerWithIdentifier:@"DetailHTTPNavController"];
-    //self.masterDetailVCs[1] =
+    UINavigationController *httpVC = (UINavigationController*) [iPadStory instantiateViewControllerWithIdentifier:@"HTTPNavVC"];
+    UINavigationController *postVC = (UINavigationController*) [iPadStory instantiateViewControllerWithIdentifier:@"PostVCNav"];
+
     switch(indexPath.row){
         case 0:
             NSLog(@"Header clicked");
@@ -178,7 +180,10 @@
             break;
             
         case 2:
+            self.masterDetailVCs[1] = postVC;
+            self.splitViewController.viewControllers = self.masterDetailVCs;
             break;
+            
         default:break;
     }
 
