@@ -45,15 +45,18 @@
                         <inset key="separatorInset" minX="15" minY="0.0" maxX="0.0" maxY="0.0"/>
                         <color key="sectionIndexBackgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
                         <prototypes>
-                            <tableViewCell contentMode="scaleToFill" selectionStyle="blue" hidesAccessoryWhenEditing="NO" indentationLevel="1" indentationWidth="0.0" id="0nL-Di-3v0">
+                            <tableViewCell contentMode="scaleToFill" selectionStyle="blue" accessoryType="disclosureIndicator" hidesAccessoryWhenEditing="NO" indentationLevel="1" indentationWidth="0.0" id="0nL-Di-3v0">
                                 <rect key="frame" x="0.0" y="86" width="320" height="44"/>
                                 <autoresizingMask key="autoresizingMask"/>
                                 <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="0nL-Di-3v0" id="BCy-Eq-sjz">
-                                    <rect key="frame" x="0.0" y="0.0" width="320" height="44"/>
+                                    <rect key="frame" x="0.0" y="0.0" width="287" height="44"/>
                                     <autoresizingMask key="autoresizingMask"/>
                                     <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
                                 </tableViewCellContentView>
                                 <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
+                                <connections>
+                                    <segue destination="mzL-0J-nd5" kind="push" identifier="Recent" splitViewControllerTargetIndex="0" id="UUA-QC-MvJ"/>
+                                </connections>
                             </tableViewCell>
                         </prototypes>
                         <connections>
@@ -66,6 +69,36 @@
                 <placeholder placeholderIdentifier="IBFirstResponder" id="JOg-PA-9or" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="1609" y="-1537"/>
+        </scene>
+        <!--RecentURLTVC-->
+        <scene sceneID="aDi-Qu-M3g">
+            <objects>
+                <tableViewController id="mzL-0J-nd5" customClass="MSHRecentURLTVC" sceneMemberID="viewController">
+                    <tableView key="view" clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="44" sectionHeaderHeight="22" sectionFooterHeight="22" id="fXg-Hk-yOc">
+                        <rect key="frame" x="0.0" y="0.0" width="320" height="768"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                        <simulatedOrientationMetrics key="simulatedOrientationMetrics" orientation="landscapeRight"/>
+                        <prototypes>
+                            <tableViewCell contentMode="scaleToFill" selectionStyle="blue" hidesAccessoryWhenEditing="NO" indentationLevel="1" indentationWidth="0.0" id="ewc-n5-eQ2">
+                                <rect key="frame" x="0.0" y="86" width="320" height="44"/>
+                                <autoresizingMask key="autoresizingMask"/>
+                                <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="ewc-n5-eQ2" id="nv8-gc-a34">
+                                    <rect key="frame" x="0.0" y="0.0" width="320" height="43"/>
+                                    <autoresizingMask key="autoresizingMask"/>
+                                </tableViewCellContentView>
+                            </tableViewCell>
+                        </prototypes>
+                        <connections>
+                            <outlet property="dataSource" destination="mzL-0J-nd5" id="ze4-tF-nr9"/>
+                            <outlet property="delegate" destination="mzL-0J-nd5" id="2Wz-rA-2GB"/>
+                        </connections>
+                    </tableView>
+                    <navigationItem key="navigationItem" id="k6B-I5-yvI"/>
+                </tableViewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="Qkf-lO-Ykg" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="2078" y="-1646"/>
         </scene>
         <!--Navigation Controller-->
         <scene sceneID="NjF-M3-VoF">
@@ -115,10 +148,10 @@
             </objects>
             <point key="canvasLocation" x="2198" y="-818"/>
         </scene>
-        <!--SettingsVC-->
+        <!--SettingsVC - HTTP-->
         <scene sceneID="IBw-x4-fIe">
             <objects>
-                <viewController storyboardIdentifier="DetailHTTPNavController" id="7Ao-cg-0G2" customClass="MSHSettingsVC" sceneMemberID="viewController">
+                <viewController storyboardIdentifier="DetailHTTPNavController" title="HTTP" id="7Ao-cg-0G2" customClass="MSHSettingsVC" sceneMemberID="viewController">
                     <layoutGuides>
                         <viewControllerLayoutGuide type="top" id="g1X-vT-Q7v"/>
                         <viewControllerLayoutGuide type="bottom" id="cuX-r2-jf8"/>
@@ -160,10 +193,10 @@
             </objects>
             <point key="canvasLocation" x="3091" y="-718"/>
         </scene>
-        <!--View Controller-->
+        <!--View Controller - HTTP Response-->
         <scene sceneID="TAX-Pv-50Z">
             <objects>
-                <viewController id="szC-9c-aN9" customClass="MSHViewController" sceneMemberID="viewController">
+                <viewController title="HTTP Response" id="szC-9c-aN9" customClass="MSHViewController" sceneMemberID="viewController">
                     <layoutGuides>
                         <viewControllerLayoutGuide type="top" id="6Xw-kK-9Ph"/>
                         <viewControllerLayoutGuide type="bottom" id="7FF-R3-ESc"/>
@@ -193,10 +226,10 @@
             </objects>
             <point key="canvasLocation" x="4058" y="-606"/>
         </scene>
-        <!--PostVC-->
+        <!--PostVC - POST-->
         <scene sceneID="t9S-ex-nL3">
             <objects>
-                <viewController id="VgU-G6-Tyg" customClass="MSHPostVC" sceneMemberID="viewController">
+                <viewController title="POST" id="VgU-G6-Tyg" customClass="MSHPostVC" sceneMemberID="viewController">
                     <layoutGuides>
                         <viewControllerLayoutGuide type="top" id="uZS-np-0Fd"/>
                         <viewControllerLayoutGuide type="bottom" id="c36-0L-rpx"/>
@@ -266,6 +299,9 @@
                                 <state key="normal" title="Add More Key pairs">
                                     <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
                                 </state>
+                                <connections>
+                                    <segue destination="igX-Sh-dhk" kind="modal" modalPresentationStyle="formSheet" id="TPP-2f-IDw"/>
+                                </connections>
                             </button>
                             <button appearanceType="aqua" opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="TeW-hs-KGS" customClass="MSHCustomButton">
                                 <rect key="frame" x="57" y="605" width="595" height="31"/>
@@ -287,10 +323,30 @@
             </objects>
             <point key="canvasLocation" x="4494" y="340"/>
         </scene>
-        <!--Post ResponseVC-->
+        <!--View Controller-->
+        <scene sceneID="24e-Jx-rec">
+            <objects>
+                <viewController id="igX-Sh-dhk" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="j9K-Or-rV1"/>
+                        <viewControllerLayoutGuide type="bottom" id="xN3-K3-jFh"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="95S-cz-dH8">
+                        <rect key="frame" x="0.0" y="0.0" width="400" height="500"/>
+                        <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
+                    </view>
+                    <freeformSimulatedSizeMetrics key="simulatedDestinationMetrics"/>
+                    <size key="freeformSize" width="400" height="500"/>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="api-OK-KMh" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="5158" y="1229"/>
+        </scene>
+        <!--Post ResponseVC - POST Response-->
         <scene sceneID="xyR-sT-JsQ">
             <objects>
-                <viewController id="djp-Fj-XYU" customClass="MSHPostResponseVC" sceneMemberID="viewController">
+                <viewController title="POST Response" id="djp-Fj-XYU" customClass="MSHPostResponseVC" sceneMemberID="viewController">
                     <layoutGuides>
                         <viewControllerLayoutGuide type="top" id="MLC-ou-tGd"/>
                         <viewControllerLayoutGuide type="bottom" id="tp5-KC-scs"/>

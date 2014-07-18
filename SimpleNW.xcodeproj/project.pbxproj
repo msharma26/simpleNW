@@ -49,6 +49,7 @@
 		32B4B5FE195D02F600F523E4 /* UIWebView+AFNetworking.m in Sources */ = {isa = PBXBuildFile; fileRef = 32B4B5ED195D02F600F523E4 /* UIWebView+AFNetworking.m */; };
 		32BCBCE1196205060006470C /* MSHPostResponseVC.m in Sources */ = {isa = PBXBuildFile; fileRef = 32BCBCE0196205060006470C /* MSHPostResponseVC.m */; };
 		32BCBCE419621BF80006470C /* MSHCustomButton.m in Sources */ = {isa = PBXBuildFile; fileRef = 32BCBCE319621BF80006470C /* MSHCustomButton.m */; };
+		32DD037C1978FB7800E0FF74 /* MSHRecentURLTVC.m in Sources */ = {isa = PBXBuildFile; fileRef = 32DD037B1978FB7800E0FF74 /* MSHRecentURLTVC.m */; };
 		32E3B510195F1A3D009B6E9B /* Settings.bundle in Resources */ = {isa = PBXBuildFile; fileRef = 32E3B50F195F1A3C009B6E9B /* Settings.bundle */; };
 		32E3B513195F31AB009B6E9B /* MSHPostVC.m in Sources */ = {isa = PBXBuildFile; fileRef = 32E3B512195F31AB009B6E9B /* MSHPostVC.m */; };
 		32E3B51D195F46C1009B6E9B /* MSHKeyboardListener.m in Sources */ = {isa = PBXBuildFile; fileRef = 32E3B51C195F46C1009B6E9B /* MSHKeyboardListener.m */; };
@@ -133,6 +134,8 @@
 		32BCBCE0196205060006470C /* MSHPostResponseVC.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MSHPostResponseVC.m; sourceTree = "<group>"; };
 		32BCBCE219621BF80006470C /* MSHCustomButton.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = MSHCustomButton.h; path = CustomUI/MSHCustomButton.h; sourceTree = "<group>"; };
 		32BCBCE319621BF80006470C /* MSHCustomButton.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = MSHCustomButton.m; path = CustomUI/MSHCustomButton.m; sourceTree = "<group>"; };
+		32DD037A1978FB7800E0FF74 /* MSHRecentURLTVC.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MSHRecentURLTVC.h; sourceTree = "<group>"; };
+		32DD037B1978FB7800E0FF74 /* MSHRecentURLTVC.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MSHRecentURLTVC.m; sourceTree = "<group>"; };
 		32E3B50E195E744F009B6E9B /* Properties.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Properties.h; sourceTree = "<group>"; };
 		32E3B50F195F1A3C009B6E9B /* Settings.bundle */ = {isa = PBXFileReference; lastKnownFileType = "wrapper.plug-in"; path = Settings.bundle; sourceTree = "<group>"; };
 		32E3B511195F31AB009B6E9B /* MSHPostVC.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MSHPostVC.h; sourceTree = "<group>"; };
@@ -173,6 +176,8 @@
 				321C6D76196F8005002FCAC6 /* MSHLeftTableVC.m */,
 				321C6D7F1975134F002FCAC6 /* MSHiPadRootVC.h */,
 				321C6D801975134F002FCAC6 /* MSHiPadRootVC.m */,
+				32DD037A1978FB7800E0FF74 /* MSHRecentURLTVC.h */,
+				32DD037B1978FB7800E0FF74 /* MSHRecentURLTVC.m */,
 			);
 			name = iPad;
 			sourceTree = "<group>";
@@ -450,6 +455,7 @@
 				32B4B5FB195D02F600F523E4 /* UIImageView+AFNetworking.m in Sources */,
 				32B4B5AA195D02D600F523E4 /* MSHViewController.m in Sources */,
 				321C6D811975134F002FCAC6 /* MSHiPadRootVC.m in Sources */,
+				32DD037C1978FB7800E0FF74 /* MSHRecentURLTVC.m in Sources */,
 				32B4B5EF195D02F600F523E4 /* AFHTTPRequestOperationManager.m in Sources */,
 				32B4B5FC195D02F600F523E4 /* UIProgressView+AFNetworking.m in Sources */,
 				32B4B5F1195D02F600F523E4 /* AFNetworkReachabilityManager.m in Sources */,

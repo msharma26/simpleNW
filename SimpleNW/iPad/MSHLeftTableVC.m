@@ -15,6 +15,9 @@
 @interface MSHLeftTableVC ()<UITableViewDataSource, UITableViewDelegate, UISplitViewControllerDelegate>
 @property (nonatomic, strong) MSHiPadRootVC *rootVC;
 @property (nonatomic, strong) NSMutableArray *masterDetailVCs;
+
+@property (nonatomic, strong) UINavigationController *httpVC;
+@property (nonatomic, strong) UINavigationController *postVC;
 @end
 
 @implementation MSHLeftTableVC
@@ -40,6 +43,12 @@
     
     [self.navigationController setNavigationBarHidden:YES];
     self.masterDetailVCs = [[NSMutableArray alloc] initWithArray:self.splitViewController.viewControllers];
+    
+    // Initial Setup of viewControllers
+    UIStoryboard *iPadStory = [UIStoryboard storyboardWithName:@"Main_iPad" bundle: nil];
+    self.httpVC = (UINavigationController*) [iPadStory instantiateViewControllerWithIdentifier:@"HTTPNavVC"];
+    self.postVC = (UINavigationController*) [iPadStory instantiateViewControllerWithIdentifier:@"PostVCNav"];
+
 }
 
 -(void) awakeFromNib{
@@ -165,9 +174,7 @@
     self.rootVC = [[MSHiPadRootVC alloc] init];
     //UINavigationController *navController = (UINavigationController*) self.splitViewController.childViewControllers[1];
 
-    UIStoryboard *iPadStory = [UIStoryboard storyboardWithName:@"Main_iPad" bundle: nil];
-    UINavigationController *httpVC = (UINavigationController*) [iPadStory instantiateViewControllerWithIdentifier:@"HTTPNavVC"];
-    UINavigationController *postVC = (UINavigationController*) [iPadStory instantiateViewControllerWithIdentifier:@"PostVCNav"];
+    
 
     switch(indexPath.row){
         case 0:
@@ -175,12 +182,12 @@
             break;
             
         case 1:
-            self.masterDetailVCs[1] = httpVC;
+            self.masterDetailVCs[1] = self.httpVC;
             self.splitViewController.viewControllers = self.masterDetailVCs;
             break;
             
         case 2:
-            self.masterDetailVCs[1] = postVC;
+            self.masterDetailVCs[1] = self.postVC;
             self.splitViewController.viewControllers = self.masterDetailVCs;
             break;
             
