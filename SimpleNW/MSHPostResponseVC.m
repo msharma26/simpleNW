@@ -7,6 +7,7 @@
 //
 
 #import "MSHPostResponseVC.h"
+#import "AFNEtworking.h"
 
 @interface MSHPostResponseVC ()
 @property (nonatomic, weak) IBOutlet UITextView *txtViewResponse;
@@ -27,6 +28,8 @@
 {
     [super viewDidLoad];
     self.txtViewResponse.text = (NSString*)self.responseDictionary;
+    
+    [self jsonTapped];
 }
 
 - (void)didReceiveMemoryWarning
@@ -45,5 +48,41 @@
     // Pass the selected object to the new view controller.
 }
 */
+
+-(NSDictionary*) makeDictionaryFromParams{
+    NSDictionary *params = @{@"username": @"msharma",
+                             @"password": @"Avinash1",
+                             @"returnType": @"json"
+                             };
+    
+    return params;
+}
+
+
+-(void) jsonTapped
+{
+    // 0.5 Creating weak references
+    __weak id weakself = self;
+    
+    
+    AFHTTPRequestOperationManager *manager = [AFHTTPRequestOperationManager manager];
+    NSDictionary *params = @{@"username": @"msharma",
+                             @"password": @"Avinash1",
+                             @"returnType": @"json"
+                             };
+    [manager POST:@"http://manusharma.me/login/check_login.php"
+       parameters:params
+          success:^(AFHTTPRequestOperation *operation, id responseObject) {
+              [[weakself responseDictionary] setDictionary:(NSDictionary*) responseObject];
+              
+              NSLog(@"JSON: %@", responseObject);
+              
+              
+          }
+          failure:^(AFHTTPRequestOperation *operation, NSError *error) {
+              NSLog(@"Error: %@", error);
+          }];
+}
+
 
 @end

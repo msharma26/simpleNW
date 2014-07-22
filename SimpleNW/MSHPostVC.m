@@ -10,10 +10,17 @@
 #import "MSHKeyboardListener.h"
 #import "AFNetworking.h"
 #import "MSHPostResponseVC.h"
+#import "MSHAddKeysVC.h"
+
+
 
 #define BaseURLString @"http://manusharma.me"
 
-@interface MSHPostVC ()<UITextFieldDelegate>
+@interface MSHPostVC ()<UITextFieldDelegate, MSHAddKeysDelegate>
+
+// Parameter count
+@property (nonatomic) NSInteger keyCount;
+
 @property (nonatomic, strong) MSHKeyboardListener *keyboardListener;
 @property (nonatomic, strong) NSMutableDictionary *responseDictionary;
 @property (nonatomic, weak) IBOutlet UIScrollView *scrollViewMain;
@@ -22,6 +29,10 @@
 
 // IBActions
 -(IBAction) btnActionSendRequest:(id)sender;
+-(IBAction) btnActionAddKeys:(id) sender;
+
+
+@property (nonatomic, strong) MSHAddKeysVC *vc;
 
 @end
 
@@ -39,10 +50,11 @@
 - (void)viewDidLoad
 {
     [super viewDidLoad];
-    [self jsonTapped];
+    //[self jsonTapped];
     self.keyboardListener = [MSHKeyboardListener shared];
+    self.keyCount = 3;
     
-    
+    self.vc.delegateFTW = self;
 }
 
 -(void) viewDidLayoutSubviews{
@@ -56,6 +68,12 @@
 }
 
 
+
+-(void) createTextViewsForPairs: (NSInteger) keyValuePairCount{
+    for (int i=0; i<keyValuePairCount; i++){
+        
+    }
+}
 
 
 -(void) jsonTapped
@@ -121,6 +139,12 @@
         
         
     }
+    
+    if([segue.identifier isEqualToString:@"AddKeysSegue"]){
+        self.vc = (MSHAddKeysVC*)segue.destinationViewController;
+        self.vc.keysCount = self.keyCount;
+        
+    }
 }
 
 
@@ -135,4 +159,18 @@
 -(IBAction)btnActionSendRequest:(id)sender{
     //[self performSegueWithIdentifier:@"SeguePostResponse" sender:self];
 }
+
+-(IBAction)btnActionAddKeys:(id)sender{
+    
+}
+
+
+#pragma mark - Add Keys VC Delegate
+
+-(void) didCancel{
+    [self.vc dismissViewControllerAnimated:YES completion:^{
+       
+    }];
+}
+
 @end

@@ -16,9 +16,17 @@
 @property (nonatomic, strong) MSHiPadRootVC *rootVC;
 @property (nonatomic, strong) NSMutableArray *masterDetailVCs;
 
+// Separate view controllers in Storyboard.
+// These need to be added to the detailViiew of the Splitview.
 @property (nonatomic, strong) UINavigationController *httpVC;
 @property (nonatomic, strong) UINavigationController *postVC;
+
+
+// Adding URL to recent.
+
 @end
+
+
 
 @implementation MSHLeftTableVC
 
@@ -34,12 +42,6 @@
 - (void)viewDidLoad
 {
     [super viewDidLoad];
-    
-    // Uncomment the following line to preserve selection between presentations.
-    // self.clearsSelectionOnViewWillAppear = NO;
-    
-    // Uncomment the following line to display an Edit button in the navigation bar for this view controller.
-    // self.navigationItem.rightBarButtonItem = self.editButtonItem;
     
     [self.navigationController setNavigationBarHidden:YES];
     self.masterDetailVCs = [[NSMutableArray alloc] initWithArray:self.splitViewController.viewControllers];
@@ -172,8 +174,6 @@
 
 - (void)tableView:(UITableView *)tableView didSelectRowAtIndexPath:(NSIndexPath *)indexPath{
     self.rootVC = [[MSHiPadRootVC alloc] init];
-    //UINavigationController *navController = (UINavigationController*) self.splitViewController.childViewControllers[1];
-
     
 
     switch(indexPath.row){
