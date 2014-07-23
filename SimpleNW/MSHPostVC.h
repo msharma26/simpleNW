@@ -9,5 +9,5 @@
 #import <UIKit/UIKit.h>
 
 @interface MSHPostVC : UIViewController
-
+@property (nonatomic, strong)IBOutlet UITableView *parameterTable;
 @end

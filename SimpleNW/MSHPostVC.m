@@ -11,12 +11,12 @@
 #import "AFNetworking.h"
 #import "MSHPostResponseVC.h"
 #import "MSHAddKeysVC.h"
-
+#import "MSHParameterCell.h"
 
 
 #define BaseURLString @"http://manusharma.me"
 
-@interface MSHPostVC ()<UITextFieldDelegate, MSHAddKeysDelegate>
+@interface MSHPostVC ()<UITextFieldDelegate, MSHAddKeysDelegate, UITableViewDataSource, UITableViewDelegate>
 
 // Parameter count
 @property (nonatomic) NSInteger keyCount;
@@ -47,14 +47,30 @@
     return self;
 }
 
+
+static NSString *paramCellID = @"parameterCell";
+
+
 - (void)viewDidLoad
 {
     [super viewDidLoad];
+    
+    // Registering the Cell
+    // Registering the nib and hence the class
+    UINib *cellNib = [UINib nibWithNibName:@"MSHParameterCell" bundle:nil];
+    [self.parameterTable registerNib:cellNib forCellReuseIdentifier:paramCellID];
+
+    
     //[self jsonTapped];
     self.keyboardListener = [MSHKeyboardListener shared];
+    
+    // Setting initial parameter count = 3
     self.keyCount = 3;
     
-    self.vc.delegateFTW = self;
+    //self.vc.delegateFTW = self;
+    
+
+
 }
 
 -(void) viewDidLayoutSubviews{
@@ -161,7 +177,12 @@
 }
 
 -(IBAction)btnActionAddKeys:(id)sender{
-    
+    [[self parameterTable] beginUpdates];
+        NSArray *paths = [NSArray arrayWithObject:[NSIndexPath indexPathForRow:0 inSection:0]];
+    [self.parameterTable insertRowsAtIndexPaths:paths withRowAnimation:UITableViewRowAnimationLeft];
+    self.keyCount++;
+    [self.parameterTable reloadData];
+    [[self parameterTable] endUpdates];
 }
 
 
@@ -172,5 +193,23 @@
        
     }];
 }
+
+
+#pragma mark - TableView DataSource
+
+- (NSInteger)tableView:(UITableView *)tableView numberOfRowsInSection:(NSInteger)section{
+    return [self keyCount];
+}
+
+- (UITableViewCell *)tableView:(UITableView *)tableView cellForRowAtIndexPath:(NSIndexPath *)indexPath{
+    MSHParameterCell *paramsCell = (MSHParameterCell *) [tableView dequeueReusableCellWithIdentifier:paramCellID forIndexPath:indexPath];
+    
+    if(!paramsCell){
+        
+    }
+    
+    return paramsCell;
+}
+
 
 @end

@@ -7,7 +7,6 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
-		32008AF61979A729005C68AD /* MSHPostParameter.m in Sources */ = {isa = PBXBuildFile; fileRef = 32008AF51979A729005C68AD /* MSHPostParameter.m */; };
 		321C6D77196F8005002FCAC6 /* MSHLeftTableVC.m in Sources */ = {isa = PBXBuildFile; fileRef = 321C6D76196F8005002FCAC6 /* MSHLeftTableVC.m */; };
 		321C6D7B196FD800002FCAC6 /* blur_grey.jpeg in Resources */ = {isa = PBXBuildFile; fileRef = 321C6D79196FD800002FCAC6 /* blur_grey.jpeg */; };
 		321C6D7C196FD800002FCAC6 /* blur_grey.jpeg in Resources */ = {isa = PBXBuildFile; fileRef = 321C6D79196FD800002FCAC6 /* blur_grey.jpeg */; };
@@ -52,6 +51,8 @@
 		32BCBCE419621BF80006470C /* MSHCustomButton.m in Sources */ = {isa = PBXBuildFile; fileRef = 32BCBCE319621BF80006470C /* MSHCustomButton.m */; };
 		32DD037C1978FB7800E0FF74 /* MSHRecentURLTVC.m in Sources */ = {isa = PBXBuildFile; fileRef = 32DD037B1978FB7800E0FF74 /* MSHRecentURLTVC.m */; };
 		32DD038219798CC900E0FF74 /* MSHAddKeysVC.m in Sources */ = {isa = PBXBuildFile; fileRef = 32DD038119798CC900E0FF74 /* MSHAddKeysVC.m */; };
+		32E146D2197EF6FC00CA89CB /* MSHParameterCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 32E146D0197EF6FC00CA89CB /* MSHParameterCell.m */; };
+		32E146D3197EF6FC00CA89CB /* MSHParameterCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 32E146D1197EF6FC00CA89CB /* MSHParameterCell.xib */; };
 		32E3B510195F1A3D009B6E9B /* Settings.bundle in Resources */ = {isa = PBXBuildFile; fileRef = 32E3B50F195F1A3C009B6E9B /* Settings.bundle */; };
 		32E3B513195F31AB009B6E9B /* MSHPostVC.m in Sources */ = {isa = PBXBuildFile; fileRef = 32E3B512195F31AB009B6E9B /* MSHPostVC.m */; };
 		32E3B51D195F46C1009B6E9B /* MSHKeyboardListener.m in Sources */ = {isa = PBXBuildFile; fileRef = 32E3B51C195F46C1009B6E9B /* MSHKeyboardListener.m */; };
@@ -68,8 +69,6 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
-		32008AF41979A729005C68AD /* MSHPostParameter.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MSHPostParameter.h; sourceTree = "<group>"; };
-		32008AF51979A729005C68AD /* MSHPostParameter.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MSHPostParameter.m; sourceTree = "<group>"; };
 		321C6D75196F8005002FCAC6 /* MSHLeftTableVC.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = MSHLeftTableVC.h; path = iPad/MSHLeftTableVC.h; sourceTree = "<group>"; };
 		321C6D76196F8005002FCAC6 /* MSHLeftTableVC.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = MSHLeftTableVC.m; path = iPad/MSHLeftTableVC.m; sourceTree = "<group>"; };
 		321C6D79196FD800002FCAC6 /* blur_grey.jpeg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = blur_grey.jpeg; sourceTree = "<group>"; };
@@ -142,6 +141,9 @@
 		32DD037B1978FB7800E0FF74 /* MSHRecentURLTVC.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MSHRecentURLTVC.m; sourceTree = "<group>"; };
 		32DD038019798CC900E0FF74 /* MSHAddKeysVC.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MSHAddKeysVC.h; sourceTree = "<group>"; };
 		32DD038119798CC900E0FF74 /* MSHAddKeysVC.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MSHAddKeysVC.m; sourceTree = "<group>"; };
+		32E146CF197EF6FC00CA89CB /* MSHParameterCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MSHParameterCell.h; sourceTree = "<group>"; };
+		32E146D0197EF6FC00CA89CB /* MSHParameterCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MSHParameterCell.m; sourceTree = "<group>"; };
+		32E146D1197EF6FC00CA89CB /* MSHParameterCell.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = MSHParameterCell.xib; sourceTree = "<group>"; };
 		32E3B50E195E744F009B6E9B /* Properties.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Properties.h; sourceTree = "<group>"; };
 		32E3B50F195F1A3C009B6E9B /* Settings.bundle */ = {isa = PBXFileReference; lastKnownFileType = "wrapper.plug-in"; path = Settings.bundle; sourceTree = "<group>"; };
 		32E3B511195F31AB009B6E9B /* MSHPostVC.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MSHPostVC.h; sourceTree = "<group>"; };
@@ -335,14 +337,15 @@
 		32BCBCE519635C640006470C /* Post */ = {
 			isa = PBXGroup;
 			children = (
+				32E146CF197EF6FC00CA89CB /* MSHParameterCell.h */,
+				32E146D0197EF6FC00CA89CB /* MSHParameterCell.m */,
+				32E146D1197EF6FC00CA89CB /* MSHParameterCell.xib */,
 				32E3B511195F31AB009B6E9B /* MSHPostVC.h */,
 				32E3B512195F31AB009B6E9B /* MSHPostVC.m */,
 				32BCBCDF196205060006470C /* MSHPostResponseVC.h */,
 				32BCBCE0196205060006470C /* MSHPostResponseVC.m */,
 				32DD038019798CC900E0FF74 /* MSHAddKeysVC.h */,
 				32DD038119798CC900E0FF74 /* MSHAddKeysVC.m */,
-				32008AF41979A729005C68AD /* MSHPostParameter.h */,
-				32008AF51979A729005C68AD /* MSHPostParameter.m */,
 			);
 			name = Post;
 			sourceTree = "<group>";
@@ -439,6 +442,7 @@
 				32B4B5AC195D02D600F523E4 /* Images.xcassets in Resources */,
 				32E3B510195F1A3D009B6E9B /* Settings.bundle in Resources */,
 				32B4B5A4195D02D600F523E4 /* Main_iPhone.storyboard in Resources */,
+				32E146D3197EF6FC00CA89CB /* MSHParameterCell.xib in Resources */,
 				32B4B59B195D02D600F523E4 /* InfoPlist.strings in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -476,13 +480,13 @@
 				32B4B5F8195D02F600F523E4 /* UIActivityIndicatorView+AFNetworking.m in Sources */,
 				32B4B5F2195D02F600F523E4 /* AFSecurityPolicy.m in Sources */,
 				32B4B5FD195D02F600F523E4 /* UIRefreshControl+AFNetworking.m in Sources */,
+				32E146D2197EF6FC00CA89CB /* MSHParameterCell.m in Sources */,
 				321C6D77196F8005002FCAC6 /* MSHLeftTableVC.m in Sources */,
 				32B4B5FE195D02F600F523E4 /* UIWebView+AFNetworking.m in Sources */,
 				32BCBCE1196205060006470C /* MSHPostResponseVC.m in Sources */,
 				32E3B51D195F46C1009B6E9B /* MSHKeyboardListener.m in Sources */,
 				32B4B5F0195D02F600F523E4 /* AFHTTPSessionManager.m in Sources */,
 				32B4B5F9195D02F600F523E4 /* UIAlertView+AFNetworking.m in Sources */,
-				32008AF61979A729005C68AD /* MSHPostParameter.m in Sources */,
 				32B4B5F4195D02F600F523E4 /* AFURLRequestSerialization.m in Sources */,
 				32E3B513195F31AB009B6E9B /* MSHPostVC.m in Sources */,
 				32BCBCE419621BF80006470C /* MSHCustomButton.m in Sources */,
